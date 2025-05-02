@@ -1,20 +1,31 @@
 # EX 3A Knight Tour & Count Path
-## DATE:25-03-2025
+## DATE: 25-03-2025
 ## AIM:
 To write a python program to find minimum steps to reach to specific cell in minimum moves by knight
 
 
 ## Algorithm
 1.Start the program.
+
 2.Input: Size of the board N Starting position of the knight knightpos = [x1, y1] Target position targetpos = [x2, y2]
+
 3.Create a class cell with: x, y: current coordinates dist: number of steps taken to reach this cell
+
 4.Define isInside(x, y, N)
+
 5.Return True if the cell (x, y) lies within the board limits 1 ≤ x, y ≤ N, else False.
+
 6.Define arrays for the 8 possible moves of a knight:
+
 7.Initialize a queue for BFS and add the starting position as the first cell with dist = 0.
+
 8.Initialize a 2D array visited[N+1][N+1] to track visited positions.
-9.While the queue is not empty: Remove the front cell from the queue → curr If curr.x == target.x and curr.y == target.y, return curr.dist as the result. Else: For each of the 8 knight moves: Calculate the next position (x, y). If isInside(x, y, N) and not visited[x][y]: Mark as visited and enqueue cell(x, y, curr.dist + 1)
+
+9.While the queue is not empty: Remove the front cell from the queue → curr If curr.x == target.x and curr.y == target.y, return curr.dist as the result. Else: 
+For each of the 8 knight moves: Calculate the next position (x, y). If isInside(x, y, N) and not visited[x][y]: Mark as visited and enqueue cell(x, y, curr.dist + 1)
+
 10.If no path found, return infinity (or a message indicating unreachable)
+
 11.End the program.  
 
 ## Program:
